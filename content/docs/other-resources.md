@@ -19,6 +19,9 @@ Use the the following comment to undo the replacement:
 reg delete "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v "Debugger" /f
 ```
 
+For your convenience this feature is implemented in to an installable tool called [NppLauncher](https://sourceforge.net/projects/npplauncher/).
+It will install this registry change and additionally a Npp plugin that detects when the textfile get's closed again to imitate the "Single document behavior" of the original notepad.exe. This is important for scripts that want to wait for input in a file before continuation e.g. git commit.
+
 This has historically worked from Windows 7 through Windows 10.  However, Microsoft has changed things in Windows 11 , and this may not work for you.
 
 ### Registry Edit Warning
